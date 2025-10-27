@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #f8fafc;
+  --color-foreground: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #020817;
+    --color-foreground: #f8fafc;
+  }
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
